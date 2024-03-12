@@ -1,6 +1,6 @@
 # Movie App | 영화앱
 
-- [X] Router 설정
+- [x] Router 설정
 - [] 각 컴포넌트 제작
 - [] API 설정
 - [] Loding 설정
@@ -14,6 +14,7 @@
 - [] Deploy
 
 ## 설치항목
+
 - [✔] react_router-dom
 - [] styled-components
 - [] styled-reset
