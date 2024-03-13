@@ -1,8 +1,8 @@
 # Movie App | 영화앱
 
 - [x] Router 설정
-- [] 각 컴포넌트 제작
-- [] API 설정
+- [x] 각 컴포넌트 제작
+- [x] API 설정
 - [] Loding 설정
 - [] Home ui 및 페이지 구성
 - [] Detail ui 및 페이지 구성
@@ -15,10 +15,12 @@
 
 ## 설치항목
 
-- [✔] react_router-dom
-- [] styled-components
+- [x] react_router-dom
+- [x] styled-components
 - [] styled-reset
 - [] react-hook-form
 - [] helmet-async
 - [] font-awesome
 - [] swiper
+
+
