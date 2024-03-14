@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { nowPlaying } from "../../api";
 import styled from "styled-components";
 import { MainBanner } from "./MainBanner";
+import { Loading } from "../../components/Loading";
 
 export const Home = () => {
   const [isLoding, setIsLoding] = useState(true);
@@ -22,7 +23,7 @@ export const Home = () => {
     <>
       {isLoding ? (
         //isLoding이 true면 로딩중이고 false면 로딩이 끝나면서 불러와진다.
-        "Loding.."
+        <Loading />
       ) : (
         <>{nowData && <MainBanner imgUrl={nowData} />}</>
         //가져올때 조건을 걸어서 데이터가 불러와지면 뒤에 배너 태그도 불러와진다. 이것을 안하면 오류가발생한다
