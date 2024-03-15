@@ -1,33 +1,8 @@
 import { useEffect, useState } from "react";
 import { nowPlaying } from "../../api";
-import styled from "styled-components";
 import { MainBanner } from "./MainBanner";
 import { Loading } from "../../components/Loading";
-import { Link } from "react-router-dom";
-import { IMG_URL } from "../../constant/url";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-
-const Section = styled.section`
-  padding: 100px;
-  padding-right: 0;
-`;
-
-const Title = styled.h3`
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 30px;
-`;
-
-const Bg = styled.div`
-  height: 370px;
-  background: url(${IMG_URL}${(props) => props.$bgUrl}) no-repeat center / cover;
-`;
-
-const MovieTitle = styled.h3`
-  font-size: 18px;
-  margin-top: 20px;
-`;
+import { Movies } from "./Movies";
 
 export const Home = () => {
   const [isLoding, setIsLoding] = useState(true);
@@ -60,19 +35,8 @@ export const Home = () => {
             <>
               <MainBanner imgUrl={nowData} />
 
-              <Section>
-                <Title>현재 상영 영화</Title>
-                <Swiper slidesPerView={5.2} spaceBetween={20}>
-                  {nowData.map((data) => (
-                    <SwiperSlide key={data.id}>
-                      <Link to="#">
-                        <Bg $bgUrl={data.poster_path} />
-                        <MovieTitle>{data.title}</MovieTitle>
-                      </Link>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </Section>
+              <Movies movieData={nowData} titleText={"현재 상영 영화"} />
+              <Movies movieData={nowData} titleText={"현재 상영 영화"} />
             </>
           )}
         </>

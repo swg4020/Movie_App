@@ -16,3 +16,6 @@ const options = {
 
 export const nowPlaying = () =>
   fatch(url("movie/now_playing"), options).then((res) => res.json());
+
+export const topRated = () =>
+  fatch(url("movie/top_rated"), options).then((res) => res.json());
