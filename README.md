@@ -19,7 +19,7 @@
 
 - [x] react_router-dom
 - [x] styled-components
-- [] styled-reset
+- [x] styled-reset
 - [] react-hook-form
 - [] helmet-async
 - [] font-awesome

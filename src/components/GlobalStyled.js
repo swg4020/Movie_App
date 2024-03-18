@@ -26,4 +26,9 @@ export const GlobalStyled = createGlobalStyle`
         color: white;
     }
 
+    img{
+        width: 100%;
+        display: block;
+    }
+
 `;

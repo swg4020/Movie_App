@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { nowPlaying } from "../../api";
+import { nowPlaying, poPular, topRated, upComing } from "../../api";
 import { MainBanner } from "./MainBanner";
 import { Loading } from "../../components/Loading";
 import { Movies } from "./Movies";
@@ -8,12 +8,24 @@ export const Home = () => {
   const [isLoding, setIsLoding] = useState(true);
 
   const [nowData, setNowData] = useState();
+  const [popData, setPopData ] = useState();
+  const [topData, setTopData] = useState();
+  const [upData, setUpData] = useState();
 
   useEffect(() => {
     (async () => {
       try {
-        const { results } = await nowPlaying();
-        setNowData(results);
+        const { results: nowResult } = await nowPlaying();
+        const { results: popResult } = await poPular();
+        const { results: TopResult } = await topRated();
+        const { results: UpResult } = await upComing();
+        // { results: UpResult } =>변수 이름을 추가로 변경하기
+
+        setNowData(nowResult);
+        setPopData(popResult);
+        setTopData(TopResult);
+        setUpData(UpResult);
+
         setIsLoding(false);
       } catch (error) {
         console.log(error);
@@ -22,7 +34,7 @@ export const Home = () => {
     })();
   }, []);
 
-  console.log(nowData);
+
 
   return (
     <>
@@ -36,7 +48,9 @@ export const Home = () => {
               <MainBanner imgUrl={nowData} />
 
               <Movies movieData={nowData} titleText={"현재 상영 영화"} />
-              <Movies movieData={nowData} titleText={"현재 상영 영화"} />
+              <Movies movieData={topData} titleText={"평점이 높은 영화"} />
+              <Movies movieData={popData} titleText={"인기 영화"} />
+              <Movies movieData={upData} titleText={"개봉 예정 영화"} />
             </>
           )}
         </>

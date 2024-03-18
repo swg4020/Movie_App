@@ -17,5 +17,20 @@ const options = {
 export const nowPlaying = () =>
   fatch(url("movie/now_playing"), options).then((res) => res.json());
 
+export const poPular = () =>
+  fatch(url("movie/popular"), options).then((res) => res.json());
+
+// export const popular = () => {
+//   return fatch(url("movie/popular"), options).then(res => res.json());
+// }
+
 export const topRated = () =>
   fatch(url("movie/top_rated"), options).then((res) => res.json());
+
+export const upComing = () =>
+  fatch(url("movie/upcoming"), options).then((res) => res.json());
+
+export const movieDetail = (id) => {
+  const detailUrl = baseUrl + `movie/${id}?language=ko-kr`;
+  return fatch(detailUrl, options).then((res) => res.json());
+};
