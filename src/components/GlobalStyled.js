@@ -5,6 +5,11 @@ export const colors = {
   point: "#e50914",
 };
 
+export const spacing = {
+  padding_640: "50px",
+  padding_450: "20px",
+};
+
 export const GlobalStyled = createGlobalStyle`
 
     ${reset}
