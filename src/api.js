@@ -34,3 +34,8 @@ export const movieDetail = (id) => {
   const detailUrl = baseUrl + `movie/${id}?language=ko-kr`;
   return fatch(detailUrl, options).then((res) => res.json());
 };
+
+export const searchMovie = (keyword) => {
+  const searchUrl = baseUrl + `search/movie?query=${keyword}&language=ko-kr`;
+  return fatch(searchUrl, options).then((res) => res.json());
+};
