@@ -3,12 +3,13 @@ import { nowPlaying, poPular, topRated, upComing } from "../../api";
 import { MainBanner } from "./MainBanner";
 import { Loading } from "../../components/Loading";
 import { Movies } from "./Movies";
+import { PageTitle } from "../../components/PageTitle";
 
 export const Home = () => {
   const [isLoding, setIsLoding] = useState(true);
 
   const [nowData, setNowData] = useState();
-  const [popData, setPopData ] = useState();
+  const [popData, setPopData] = useState();
   const [topData, setTopData] = useState();
   const [upData, setUpData] = useState();
 
@@ -34,8 +35,6 @@ export const Home = () => {
     })();
   }, []);
 
-
-
   return (
     <>
       {isLoding ? (
@@ -45,6 +44,7 @@ export const Home = () => {
         <>
           {nowData && (
             <>
+              <PageTitle title={"Home"} />
               <MainBanner imgUrl={nowData} />
 
               <Movies movieData={nowData} titleText={"현재 상영 영화"} />

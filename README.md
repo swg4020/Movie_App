@@ -7,13 +7,13 @@
 - [x] Loding 설정
 - [x] Home ui 및 페이지 구성
 - [x] Detail ui 및 페이지 구성
-- [] Search ui 및 페이지 구성
+- [x] Search ui 및 페이지 구성
+- [x] 반응형
+- [x] Helmet
+- [x] Header scroll event
+- [] Deploy
 - [] Footer 컴포넌트 구성
 - [] 404 ui 및 페이지 구성
-- [] 반응형
-- [] Helmet
-- [] scrollTo
-- [] Deploy
 
 ## 설치항목
 
@@ -23,4 +23,5 @@
 - [x] font-awesome
 - [x] swiper
 - [x] react-hook-form
-- [] helmet-async
+- [x] helmet-async
+- [x] react-icons

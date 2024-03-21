@@ -3,6 +3,7 @@ import { movieDetail } from "../../api";
 import { useParams } from "react-router-dom";
 import { Loading } from "../../components/Loading";
 import { MovieCon } from "./MovieCon";
+import { PageTitle } from "../../components/PageTitle";
 
 export const Detail = () => {
   const { id } = useParams();
@@ -24,5 +25,16 @@ export const Detail = () => {
 
   console.log(data);
 
-  return <div>{isLoading ? <Loading /> : <MovieCon data={data} />}</div>;
+  return (
+    <div>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <PageTitle title={"Detail"} />
+          <MovieCon data={data} />
+        </>
+      )}
+    </div>
+  );
 };
