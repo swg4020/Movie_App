@@ -78,6 +78,14 @@ const Text = styled.p`
   width: 100%;
   font-size: 29px;
   padding: 50px 0 50px 20px;
+  @media screen and (max-width: 640px) {
+    padding: ${spacing.padding_640} 0 50px ${spacing.padding_640};
+    
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: ${spacing.padding_450} 0 50px ${spacing.padding_450};
+  }
 `;
 
 const ErrorMessage = styled.p`

@@ -32,3 +32,4 @@ try{
 스와이퍼 설치
 npm i swiper 
 
+// 아이디/github.io/레포지토리 명
