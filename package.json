@@ -28,7 +28,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://swg4020/Movie_App/#/",
+  "homepage": "https://swg4020.github.io/Movie_App/#/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -51,5 +51,3 @@
     "gh-pages": "^6.1.1"
   }
 }
-
-
